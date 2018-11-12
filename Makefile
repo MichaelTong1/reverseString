@@ -1,10 +1,4 @@
-JFLAGS = -g
-JC = javac
-.SUFFIXES: .java .class
-.java.class: $(JC) $(JFLAGS) $*.java 
+main : g++ -w main.cpp
 
-default: classes
-
-classes: $(CLASSES:.java=.class)
-
-clean: $(RM) *.class
+clean : 
+	rm main.o a.out
